@@ -1,0 +1,8 @@
+<h1>
+  Artists
+</h1>
+<ul>
+  <li class="text" *ngFor="let artist of artists | async">
+    {{artist.title}} - {{artist.genre}}
+  </li>
+</ul>

@@ -1,6 +1,10 @@
 <h1>
   Artists
 </h1>
+<div>
+  <label>Artist name:</label> <input #artistName />
+  <button (click)="add(artistName.value); artistName.value=''">Add</button>
+</div>
 <ul>
   <li class="text" *ngFor="let artist of artists | async">
     {{artist.title}} - {{artist.genre}}

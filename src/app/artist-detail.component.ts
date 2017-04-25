@@ -9,16 +9,9 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
     templateUrl: './artist-list.component.html',
     styleUrls: [ './artist-list.component.css' ]
 })
-export class ArtistListComponent {
+export class ArtistAddComponent {
   artists: FirebaseListObservable<any[]>;
   constructor(af: AngularFire) {
     this.artists = af.database.list('/artists');
   }
-
-  add(name: string): void {
-    name = name.trim();
-    if (!name) { return; }
-    this.artists.push({ title: name, genre: 'unspecified' })
-  }
-
 }
